@@ -1,21 +1,19 @@
 /* Fichier CSS Réservia Projet 2 - OpenClassrooms */
 body{
     margin: auto;
-    font-family: Raleway; 
+    font-family: 'Raleway', sans-serif;
 }
-
-@import url('//fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 .firstHeader{
     display: grid;
-    grid-template-columns:repeat(4 / auto);
-    align-items: center;
     max-width: 1350px;
     margin: auto;
+    grid-auto-columns: 120px 600px 500px;
 }
 
 .logoReservia{
-    grid-column: 1;
+    width: auto;
+    padding-top: 10px;
 }
 
 .firstNavHeader{
@@ -44,6 +42,8 @@ body{
 
 .signUp{
     grid-column: 4;
+    display:flex;
+    justify-content: center;
     padding: 25px;
     font-weight: bold;
     text-decoration: none;
@@ -62,6 +62,8 @@ body{
     .firstHeader{
         display:grid;
         grid-template-rows: (3, 1fr);
+        grid-template-columns: auto;
+        grid-auto-columns: auto;
     }
     .logoReservia{
         order: 0;
@@ -79,7 +81,7 @@ body{
         order: 2;
         grid-column: 1 /6;
         justify-content: space-evenly;
-        border-bottom: 3px solid #0065FC;
+        border-bottom: 3px solid #F2F2F2;
     }
     .hrefNavHeader{
         display: inline-block;
@@ -90,7 +92,6 @@ body{
 
     .hrefNavHeader:hover{
         border-bottom: 3px solid;
-        border-color: #0065FC;
         color: #0065FC;
         border-top: none;
     }
@@ -388,6 +389,11 @@ figure.div-img-host{
     object-fit: cover;
 }
 
+.hostingTextArea > h4,p {
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
 .hostingtext1{
     font-weight: 800;
     padding-left: 10px;
@@ -455,7 +461,8 @@ figure.div-img-host{
 }
 
 figure.imgHostingPopulaires{
-    display: block;
+    display: flex;
+    flex-direction: row;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     margin-block-start: 5px;
@@ -465,18 +472,34 @@ figure.imgHostingPopulaires{
     overflow:hidden;
 }
 
+.hostingPopulairesTextArea{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.hostingPopulairesTextArea p :first-child{ 
+    padding-left:0;
+}
+
+.p1-host-pop{
+    margin-top: -45px;
+}
+
+.stars2{
+
+}
+
+
+
+
 .imgPop{
     height: 150px;
     width: 130px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 	object-fit: cover;
-}
-
-.infoCardPopulaires{
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
 }
 
 /* Section responsive Hébergement */
@@ -747,14 +770,14 @@ figure.imgHostingPopulaires{
     }
     .h2ActivitesMarseille{
         margin-left:0px;
-        grid-column:1;
-        grid-row:1;
+        display:flex;
     }
     .image-haute{
+        width:100%;
         max-height: 150px;
     }
     .linkActivitesMarseille{
-        width: 90%;
+        width: 100%;
     }
     .imgActivitesMarseille{
         width: 100%;
