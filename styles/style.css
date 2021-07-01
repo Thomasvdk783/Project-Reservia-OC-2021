@@ -158,7 +158,6 @@ main{
   }
 
   ul {
-    margin-block-start: 0;
     margin: 0px;
   }
     
@@ -373,8 +372,6 @@ figure.div-img-host{
     display: block;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    margin-block-start: 0;
-    margin-block-end: 0;
     margin-inline-start: 2px;
     margin-inline-end: 2px;
     overflow:hidden;
